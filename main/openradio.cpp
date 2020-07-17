@@ -456,7 +456,7 @@ void radioLoop() {
       ORPacket received = kokoroyohou();
       //If the V5 brain has just started, but this has been going,
       //then disconnect all clients, reset mySerial, and reset "next".
-      if(received.cur == 1 && mySerial != -1) {
+      if(received.cur == 1 && mySerial != 1) {
         //This will call the destructors of the connections,
         //causing them to close.
         connections.clear();
